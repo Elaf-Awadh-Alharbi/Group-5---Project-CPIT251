@@ -1,7 +1,10 @@
 
 package com.mycompany.cpit251.project.group5;
-//Hadeel Alomari 2206020
 
+/**
+ *
+ * @author Hadeel Alomari 2206020
+ */
 import java.util.ArrayList;
 import java.util.List;
 

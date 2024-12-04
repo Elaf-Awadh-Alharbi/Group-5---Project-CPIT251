@@ -14,12 +14,12 @@ public class SearchService {
 
   public List<Guide> searchByKeyword(String keyword) {
     List<Guide> results = new ArrayList<>();
-    for (Guide guide : repository.getAllGuides()) {
-        System.out.println("Checking: " + guide.getTitle());
-        if (guide.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
-            results.add(guide);
-        }
+      for (Guide guide : repository.getAllGuides()) {
+    
+    if (guide.getTitle().toLowerCase().contains(keyword.toLowerCase())) {
+        results.add(guide);
     }
+}
     return results;
 }
 

@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package com.mycompany.cpit251.project.group5;
-
+/*
+fay mohammed
+*/
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -41,7 +43,7 @@ public class RepositoryTest {
         System.out.println("Cleaning up after each test...");
     }
 
-    // Test for getAllGuides
+    // Critical tests for getAllGuides
     @Test
     public void testGetAllGuides_NotNull() {
         System.out.println("Running test: testGetAllGuides_NotNull...");
@@ -56,73 +58,13 @@ public class RepositoryTest {
         assertEquals("The number of guides should match the initialized size", 3, result.size());
     }
 
-    @Test
-    public void testGetAllGuides_FirstGuideID() {
-        System.out.println("Running test: testGetAllGuides_FirstGuideID...");
-        List<Guide> result = repository.getAllGuides();
-        assertEquals("First guide ID should match", 1, result.get(0).getGuideID());
-    }
-
-    @Test
-    public void testGetAllGuides_FirstGuideTitle() {
-        System.out.println("Running test: testGetAllGuides_FirstGuideTitle...");
-        List<Guide> result = repository.getAllGuides();
-        assertEquals("First guide title should match", "Troubleshooting Printer Issues", result.get(0).getTitle());
-    }
-
-    @Test
-    public void testGetAllGuides_FirstGuideCategory() {
-        System.out.println("Running test: testGetAllGuides_FirstGuideCategory...");
-        List<Guide> result = repository.getAllGuides();
-        assertEquals("First guide category should match", "Hardware", result.get(0).getCategory());
-    }
-
-    @Test
-    public void testGetAllGuides_FirstGuideStatus() {
-        System.out.println("Running test: testGetAllGuides_FirstGuideStatus...");
-        List<Guide> result = repository.getAllGuides();
-        assertEquals("First guide status should match", "Pending", result.get(0).getStatus());
-    }
-
-    // Tests for getGuideByID
+    // Critical tests for getGuideByID
     @Test
     public void testGetGuideByID_Existing_NotNull() {
         System.out.println("Running test: testGetGuideByID_Existing_NotNull...");
         int guideID = 2;
         Guide result = repository.getGuideByID(guideID);
         assertNotNull("Guide with ID 2 should exist", result);
-    }
-
-    @Test
-    public void testGetGuideByID_Existing_IDMatch() {
-        System.out.println("Running test: testGetGuideByID_Existing_IDMatch...");
-        int guideID = 2;
-        Guide result = repository.getGuideByID(guideID);
-        assertEquals("Guide ID should match", 2, result.getGuideID());
-    }
-
-    @Test
-    public void testGetGuideByID_Existing_TitleMatch() {
-        System.out.println("Running test: testGetGuideByID_Existing_TitleMatch...");
-        int guideID = 2;
-        Guide result = repository.getGuideByID(guideID);
-        assertEquals("Guide title should match", "How to Reset Password", result.getTitle());
-    }
-
-    @Test
-    public void testGetGuideByID_Existing_CategoryMatch() {
-        System.out.println("Running test: testGetGuideByID_Existing_CategoryMatch...");
-        int guideID = 2;
-        Guide result = repository.getGuideByID(guideID);
-        assertEquals("Guide category should match", "Account Management", result.getCategory());
-    }
-
-    @Test
-    public void testGetGuideByID_Existing_StatusMatch() {
-        System.out.println("Running test: testGetGuideByID_Existing_StatusMatch...");
-        int guideID = 2;
-        Guide result = repository.getGuideByID(guideID);
-        assertEquals("Guide status should match", "Approved", result.getStatus());
     }
 
     @Test

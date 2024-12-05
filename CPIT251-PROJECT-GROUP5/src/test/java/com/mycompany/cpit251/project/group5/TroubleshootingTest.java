@@ -1,16 +1,14 @@
 package com.mycompany.cpit251.project.group5;
 
-//elaf 2105887
-
-import org.junit.Before;
-import org.junit.Test;
 import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class TroubleshootingTest {
+public class TroubleshootingTest{
 
     private Troubleshooting troubleshooting;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         troubleshooting = new Troubleshooting();
     }
@@ -50,5 +48,6 @@ public class TroubleshootingTest {
         } catch (Exception e) {
             assertTrue("No exception should be thrown for invalid input", false);
         }
-    }
+    }   
 }
+

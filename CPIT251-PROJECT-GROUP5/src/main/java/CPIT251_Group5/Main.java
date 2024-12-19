@@ -3,13 +3,10 @@ import java.util.Scanner;
 
 /**
  *
- * @author rnoo
+ * @author Sereen Abdullah 2205753
  */
-public class Helper1 {
+public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Repository repository = new Repository();
         FeedbackService feedbackService = new FeedbackService();
